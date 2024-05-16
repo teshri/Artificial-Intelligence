@@ -1,0 +1,19 @@
+% base case
+delete_nth(1, [_|T], T).
+
+% main function
+delete_nth(N, [H|T], [H|R]) :-
+    N > 1,
+    NextPosition is N - 1,
+    delete_nth(NextPosition, T, R).
+
+% error case.
+%delete_nth(_, [], []).
+
+main17:-
+    write('Enter List: '),
+    read(L),
+    write('Enter Index Postion of Item to Delete: '),
+    read(N),
+    delete_nth(N,L,R),
+    format('Final List after Deleting Item at position ~w from list ~w is --> ~w', [N,L,R]).

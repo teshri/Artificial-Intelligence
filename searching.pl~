@@ -1,0 +1,3 @@
+member(x,[x|_]).
+member(x,[_|y]):-member(x,y).
+

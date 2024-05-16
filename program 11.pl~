@@ -1,0 +1,4 @@
+check([H|T],[X|Y]):-H=:=X,check(T,Y).
+check([_H|_T],[_X|_Y]):-write("Not a palindrome").
+check([],[]):-write("Palindrome").
+palindrome([H|T]):-reverse([H|T],[X,Y]),check([H|T],[X|Y]).

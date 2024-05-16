@@ -1,0 +1,2 @@
+lenghtList([],0).
+lenghtList([_|T],N):-lenghtList([T],N1),N is N1+1.
